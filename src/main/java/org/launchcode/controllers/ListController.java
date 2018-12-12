@@ -49,7 +49,6 @@ public class ListController {
             model.addAttribute("items", items);
             return "list-column";
         }
-
     }
 
     @RequestMapping(value = "jobs")
