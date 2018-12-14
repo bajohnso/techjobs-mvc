@@ -38,9 +38,8 @@
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
     <div>
-        <!--<h3 th:unless="${jobs} and ${jobs.size()}" >view</h3>-->
         <h3 th:if="${jobs} and ${jobs.size()}" th:text="${jobs.size()} + ' Result(s)'" ></h3>
-
+        <h3 th:unless="${jobs} and ${jobs.size()}">No results for that search. Please try again.</h3>
         <table class="job-listing" th:each="job : ${jobs}">
 
             <tr th:each="field : ${job}">
